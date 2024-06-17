@@ -24,4 +24,4 @@ def draw_polygon(n, side):
 t = turtle.Turtle()
 t.shape("turtle")
 
-draw_rectangle(40, 20)
+draw_polygon(5, 100)

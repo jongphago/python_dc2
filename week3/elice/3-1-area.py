@@ -1,14 +1,15 @@
 # 도형의 넓이를 구해주는 함수들을 구현해 봅시다.
 def triangle(base, height):
-    pass
+    area = base * height / 2
+    return area
 
 
 def rectangle(width, height):
-    pass
+    return width * height
 
 
 def circle(radius):
-    pass
+    return 3.14 * radius ** 2
 
 
 while True:

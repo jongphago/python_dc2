@@ -1,5 +1,5 @@
 def ticket(student, adult):
-    pass
+    return student * 1000 + adult * 2000
 
 total = 0
 for i in range(5):
