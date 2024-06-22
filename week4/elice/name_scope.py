@@ -1,17 +1,18 @@
-global_var = 1
-global_list = []
+print(id)  # <built-in function id>
+id = 'global'
 
-
+# Local - Enclosing - Global - Built-in
 def func():
-    local_val = global_var
-    # global_var += 1  # UnboundLocalError
-    global_list.append(1)
-    
-    print(f"In func local_val: {local_val}")
-    print(f"In func global_var: {global_var}")
+    def enclosing():
+        id = 'enclosing'
+        print(f"[elcosing] id: {id}")
+    enclosing()
+    id = 'local'
+    #     # id += 1  # UnboundLocalError
 
-# print(f"In main global_list ID: {id(global_list)}")
+    print(f"[func] id: {id}")
+
+
+print(f"[main] id: {id}")
 func()
-print(f"In main global_var: {global_var}")
-# print(f"In main global_list ID: {id(global_list)}")
-print(f"In main global_list: {global_list}")
+print(f"[main] id: {id}")
