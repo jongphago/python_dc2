@@ -8,25 +8,26 @@ def check(correct, answer):
         # 틀렸을 때 기회가 남아있으면 기회를 하나 줄이고 다시 답을 입력받습니다.
         if chance > 1:
             # 기회를 하나 줄입니다.
-            pass
+            chance -= 1
             print(
                 "틀렸습니다. 이번 문제를 맞출 수 있는 기회는 %d번 남았습니다." % chance
             )
-            # 다시 답을 입력받습니다.데
-            pass
+            # 다시 답을 입력받습니다.
+            answer = input(qst)
+            chance(correct, answer)
         # 틀렸을 때 기회가 남아있지 않으면 다음 문제로 넘어갑니다.
         else:
             print("틀렸습니다. 다음 문제입니다. \n")
-            pass
+            chance = 3
     print("\n")
 
 
 score = 0
-chance = None
+chance = 3
 
 # 변수 qst를 선언합니다.
-qst = None
-answer = input("똑똑한 사람을 가장 많이 만날 수 있는 곳은? ")
+qst = "똑똑한 사람을 가장 많이 만날 수 있는 곳은? "
+answer = input(qst)
 check("화장실", answer)
 
 qst = None
