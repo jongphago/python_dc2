@@ -18,18 +18,13 @@ def move_right():
     me.setheading(0)
 
 
-# TODO: Add the function display_score
+# TODO: Add the if statement
 def start():
     global score
     while True:
         me.forward(1)
-        if me.distance(apple) < 20:
-            score += 10
-            print(f"Score: {score}")
-            
-
-
-
+        if None:
+            pass  # Add the print statement here
 
 
 # Create a turtle object: me
@@ -44,16 +39,9 @@ apple.shape("circle")
 apple.color("red")
 apple.penup()
 
-# TODO: Create a turtle object: score_turtle
-score_turtle = t.Turtle()
-score_turtle.ht()
-score_turtle.penup()
-x = t.window_height() / 3
-y = t.window_width() / 3
-score_turtle.setpos(x, y)
 
 # TODO: Initialize the score
-score = 0
+pass  # score
 
 # Register the functions to the corresponding keys
 t.onkey(start, "space")
